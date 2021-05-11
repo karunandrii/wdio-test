@@ -17,6 +17,7 @@ specifiers:
   faker: ^5.5.3
   mocha: ^8.4.0
   node-fetch: ^2.6.1
+  rimraf: ^3.0.2
   wdio-chromedriver-service: ^7.0.0
 
 dependencies:
@@ -36,6 +37,7 @@ dependencies:
   faker: 5.5.3
   mocha: 8.4.0
   node-fetch: 2.6.1
+  rimraf: 3.0.2
   wdio-chromedriver-service: 7.0.0_eeca0c926a5d24ad372b96e6de854eb8
 
 packages:

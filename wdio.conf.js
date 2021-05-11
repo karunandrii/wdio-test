@@ -1,6 +1,13 @@
 const {
-    HEADLESS = true
+    HEADLESS
 } = process.env;
+
+let chromeOptions;
+if (HEADLESS === 'false') {
+    chromeOptions = { args: ['--window-size=1440,900'] };
+} else {
+    chromeOptions = { args: ['--headless', 'disable-gpu'] };
+}
 
 export const config = {
     runner: "local",
@@ -13,13 +20,9 @@ export const config = {
         maxInstances: 5,
         browserName: 'chrome',
         acceptInsecureCerts: true,
-        'goog:chromeOptions': HEADLESS ? {
-            args: ['--headless', 'disable-gpu']
-        } : {
-            args: ['--window-size=1440,900']
-        }
+        'goog:chromeOptions': chromeOptions
     }],
-    logLevel: "info",
+    logLevel: "error",
     bail: 0,
     baseUrl: "https://dev.deel.wtf",
     waitforTimeout: 10000,
