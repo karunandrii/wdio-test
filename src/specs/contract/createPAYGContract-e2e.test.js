@@ -32,7 +32,8 @@ describe("Create a @contract test suite", async () => {
         await CreateContractPage.waitUntilSpinnerDetached();
 
         await CreateContractPage.DefineDates.stepIsDisplayed();
-        await browser.pause(5000);
+        // DEBUG
+        // await browser.pause(5000);
         await CreateContractPage.proceedToNextStep();
 
         await CreateContractPage.Extras.fillUpSpecialClause(specialClause);
